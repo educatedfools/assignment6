@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pizza Builder!</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        form {
+            width: 60%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .form-group {
+            width: 500px;
+            clear: both;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            clear: both;
+        }
+        
+        .hideBox {
+            display: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .checkMarkValid {
+            color: green;
+        }
+        
+        .checkMarkInvalid {
+            color: red;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+   <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+   <img src="italian-pizza-web-header.jpg" alt="header img">
+    <h1 class="display-3">PizzaBros Pizza Builder</h1>
+    <p class="lead">Fill in some stuff and click some buttons and our bros will get to work.</p>
+  </div>
+</div>
+    <form action="pizzaOrder.html" id="pizzaForm" name="orderForm">
+        <fieldset>
+            <legend>Build your Pizza here!</legend>
+            <div class="form-group">
+                <label for="custName">Name:</label>
+                <p id="nameCheck"></p>
+                <input type="text" id="custName" name="name" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="address1">Address line 1:</label>
+                <input type="text" id="address1" name="address" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="address2">Unit type:</label>
+                <select id="otherSelect">
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="business">Business</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="campus">Campus</option>
+                    <option value="dorm">Dorm room</option>
+                    <option value="other" id="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group hideBox" id="reveal">
+                <label for="textarea">Please specify:</label>
+                <textarea cols="30" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="unit">Apartment number:</label>
+                <input type="text" id="unit" name="unit" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <p id="stateCheck"></p>
+                <input type="text" id="state" name="state" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code:</label>
+                <p id="zipCheck"></p>
+                <input type="number" id="zip" name="zip" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="phnum">Phone Number:</label>
+                <p id ="phCheck"></p>
+                <input type="tel" id="phnum" name="phnum" class="stored">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <p id="emailCheck"> </p>
+                <input type="email" id="email" name="email" class="stored">
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submitCheck">Next!</button>
+            </div>
+        </fieldset>
+    </form>
+<script src="script.js"></script>
+</body>
+</html>

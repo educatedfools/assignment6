@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pizza Builder!</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        form {
+            width: 60%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .form-group {
+            width: 500px;
+            clear: both;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            clear: both;
+        }
+        
+        .hideBox {
+            display: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .checkMarkValid {
+            color: green;
+        }
+        
+        .checkMarkInvalid {
+            color: red;
+        }
+        
+        .radio input {
+            margin-left: 10px;
+        }
+        
+        .priceBox {
+            float: right:
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <img src="italian-pizza-web-header.jpg" alt="header img">
+        <h1 class="display-3">PizzaBros Pizza Builder</h1>
+        <p class="lead">Fill in some stuff and click some buttons and our bros will get to work.</p>
+  </div>
+    </div>
+<form name="orderForm" action="confirm.html" method="get" id="billing">
+    <fieldset>
+        <legend>Build your Pizza here!</legend>
+        <div class="radio-inline">
+            <input type="radio" name="dough" value="handtossed" class="pizzaRadio" id="handTossed">Hand Tossed
+        </div>
+        <div class="radio-inline">
+            <input type="radio" name="dough" value="thincrust" class="pizzaRadio" id="thinCrust">Thin Crust
+        </div>
+        <div class="radio-inline">
+            <input type="radio" name="dough" value="newyorkstyle" class="pizzaRadio" id="newYorkStyle">New York Style
+        </div>
+        <div class="radio-inline">
+            <input type="radio" name="dough" value="glutenfree" class="pizzaRadio" id="glutenFree">Gluten Free
+        </div>
+        <br><br>
+        
+    <div class="form-group">
+        <label for="sizeOptions">Select size:</label>
+    <select class="form-control" id="sizeOptions">
+        <option disabled selected value>Choose size:</option>
+    </select>
+    </div>
+            
+    <div class="form-group hideBox" id="cheeseDiv">
+        <label for="cheeseOptions">Cheese options:</label>
+    <select class="form-control" id="cheeseOptions">
+        <option>Light</option>
+        <option selected="selected">Normal</option>
+        <option>Extra +$2.99</option>
+        <option>Heavy +$3.99</option>
+    </select>
+    </div>
+            
+    <div class="form-group hideBox" id="sauceDiv">
+        <label for="sauceOptions">Sauce options:</label>
+    <select class="form-control" id="sauceOptions">
+        <option selected="selected">Regular Tomato</option>
+        <option>Hearty Tomato +$.99</option>
+        <option>BBQ Sauce +$1.99</option>
+    </select>
+    </div>
+        <p>toppings $.99 each</p>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">pepperoni</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">sausage</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">ham</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">bacon</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">salami</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">peppers</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">olives</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">jalapenos</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">mushrooms</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">pineapple</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">onion</label>
+    </div>
+    <div>
+        <button type="submit" id="submitCheck">Finished building pizza</button>
+    </div>
+    </fieldset>
+</form>
+<script src="pizzaOrder.js"></script>
+</body>
+</html>
